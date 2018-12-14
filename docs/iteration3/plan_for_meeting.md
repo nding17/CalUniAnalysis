@@ -1,0 +1,26 @@
+- There is only a 1000 california schools. Put the CDS codes in manually.
+- Merge our current dataset with our test scores dataset (and distances if that is available)
+- Divide our dataset by UC campus - we make predictions for each campus, not all of them at the same time
+- First model:
+  - Divide our data by year. Each year is going to be a single data point for our model.
+  - Divide the number of students in each school by the total number of applicants (this way we have everything on a 0-1 scale, which is what we want for the output)
+  - Our features will be:
+    - For each school:
+      - Number of applied
+      - Number of accepted
+      - GPA of applied
+      - GPA of accepted
+      - SAT scores
+      - AP scores
+      - High school enrollment
+      - High school distance from the UC campus
+    - Year
+  - Run that through linear regression on a 70/30 split, see what we get.
+- Second model:
+  - As before but do cross validation instead
+- Third model:
+  - As original, but generate random rows where we only use like 30 high schools, and everything else has `Number of applied/accepted` of 0.
+  - Generate a dataset with something like 3000 rows and train.
+  - See if there is any improvement
+- Fourth model:
+  - We should have enough data for a neural net. See if that works better.
