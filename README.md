@@ -1,6 +1,6 @@
 # Predicting admission yield for University of California schools
 
-Nelson, Michal, and Nick's final project for CP341 Data Science.
+Naili (Nelson), Michal, and Nick's final project for CP341 Data Science.
 
 ## Structure of the repository
 
